@@ -32,11 +32,11 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="jp.co.kensyu.mapper" />
+        <property name="basePackage" value="jp.co.board.mapper" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="jp.co.kensyu.mapper" />
+        <property name="basePackage" value="jp.co.board.mapper" />
     </bean>
     <bean id="transactionManager"
         class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
