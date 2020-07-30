@@ -10,10 +10,16 @@
         <result column="name" property="name" />
         <result column="content" property="content" />
     </resultMap>
-
     <!-- 投稿全件取得 -->
     <select id="getPostsAll" resultMap="PostsResult">
      	select * from board;
     </select>
-
+	<!-- 投稿 -->
+	<insert id="getInsert">
+		insert into board(name,content) value (#{name},#{content});
+	</insert>
+	<!-- 削除 -->
+	<insert id="getDelete">
+		delete from board where id=#{id};
+	</insert>
 </mapper>

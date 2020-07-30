@@ -56,4 +56,16 @@ public class TopService {
 		}
 		return resultList;
 	}
+
+	/*  投稿件数計上 */
+	public int getInsert(String name,String content) {
+		int count = postsMapper.getInsert(name,content);
+		return count;
+	}
+
+	/*  削除件数計上 */
+	public int getDelete(Integer id) {
+		int count = postsMapper.getDelete(id);
+		return count;
+	}
 }

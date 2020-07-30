@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.board.mapper.CommentsMapper">
+
+	<!-- SQL結果MAP -->
+    <resultMap id="CommentsResult" type="jp.co.board.entity.CommentsEntity">
+    	<!-- column=データべース、property=java -->
+        <result column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="comment" property="comment" />
+    </resultMap>
+
+    <!-- 投稿全件取得 -->
+    <select id="getCommentsAll" resultMap="CommentsResult">
+     	select * from comment;
+    </select>
+
+</mapper>
